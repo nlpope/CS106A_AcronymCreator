@@ -19,9 +19,9 @@ public class CS106A_AcronymCreator extends ConsoleProgram
 	public void run()
 	{
 		introduceApp();
-		while(true){
+		while (true){
 			String clientString = readLine("Enter a string: ");
-			if(clientString.equals(SENTINEL)){
+			if (clientString.equals(SENTINEL)){
 				println("goodbye");
 				break;
 			}
@@ -43,7 +43,11 @@ public class CS106A_AcronymCreator extends ConsoleProgram
 	{
 		String acronym = "";
 		
-		
+		StringTokenizer tokenizer = new StringTokenizer(clientString, DELIMITERS);
+		while (tokenizer.hasMoreTokens()){
+			String token = tokenizer.nextToken();
+			acronym += token.toUpperCase().charAt(0);
+		}
 		
 		return acronym;
 	}
