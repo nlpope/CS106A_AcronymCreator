@@ -31,6 +31,9 @@ public class CS106A_AcronymCreator extends ConsoleProgram
 	}
 	
 	
+	/**
+	 * Introduces the app an its deactivating SENTINEL value.
+	 * */
 	private void introduceApp()
 	{
 		println("The CS106A_AcronymCreator class creates an " +
@@ -39,6 +42,12 @@ public class CS106A_AcronymCreator extends ConsoleProgram
 	}
 	
 	
+	/**
+	 * Creates an acronym based on every first letter of a 
+	 * client provided String.
+	 * @param clientString The string to be made into an acronym
+	 * @return The acronym created from the client's input
+	 * */
 	private String createAcronymFrom(String clientString)
 	{
 		String acronym = "";
